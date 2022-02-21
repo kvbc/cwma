@@ -81,7 +81,7 @@ int main (const int argc, const char* const argv[])
 			defaultConsoleAttributes = info.wAttributes;
 	}
 
-	// Get mouse paramters
+	// Get mouse parameters
 	if (!SystemParametersInfoA(SPI_GETMOUSE, 0, mouseParams, 0)) {
 		print_error("Failed retrieving mouse paramaters");
 		return 1;
