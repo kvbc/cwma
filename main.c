@@ -101,7 +101,7 @@ int main (const int argc, const char* const argv[])
 		return 0;
 	}
 
-	// Set updated mouse paramaters
+	// Update mouse paramaters
 	if (!SystemParametersInfoA(SPI_SETMOUSE, 0, mouseParams, SPIF_SENDCHANGE)) {
 		print_error("Failed updating the mouse paramaters");
 		return 1;
