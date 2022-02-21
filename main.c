@@ -59,8 +59,9 @@ void print_usage (const char* const argv[])
 
 void print_error (const char* const msg)
 {
+	static DWORD err;
+	err = GetLastError();
 	set_console_text_attribute(FOREGROUND_RED);
-	DWORD err = GetLastError();
 	printf("%s\nError code: %ld (0x%lX)\n", msg, err, err);
 	restore_console_text_attributes();
 }
